@@ -1,0 +1,26 @@
+<mat-card class="country-card">
+  <img mat-card-image
+       [src]="country().countryInfo.flag"
+       [alt]="country().country + ' flag'"/>
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="title-country">{{ country().country }}</mat-card-title>
+      <mat-card-subtitle>{{ country().continent }}</mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <p><span>Cases</span> {{ country().cases }}</p>
+    <p><span>Deaths</span> {{ country().deaths }}</p>
+    <p><span>Recovered</span> {{ country().recovered }}</p>
+    <p><span>Population</span> {{ country().population }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a [href]="getCountryUrl()" class="action-button"
+       mat-button
+       target="_blank">{{'country.details' | translate}}</a>
+    <span class="default-spacer"></span>
+    <button (click)="share()" aria-label="Share country data" mat-icon-button class="share-button">
+      {{ 'country.share' | translate }}
+    </button>
+  </mat-card-actions>
+</mat-card>

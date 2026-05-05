@@ -3,18 +3,21 @@ import {CountryResource, CountryResponse} from './country-response';
 
 export class CountryAssembler {
 
-  static toEntityFromResource(resource: CountryResource): Country{
+  static toEntityFromResource(resource: CountryResource): Country {
     return {
       country: resource.country,
+      countryInfo: {
+        flag: resource.countryInfo?.flag ?? ''
+      },
       cases: resource.cases,
       deaths: resource.deaths,
       recovered: resource.recovered,
-      population:resource.population,
-      continent: resource.continent
+      population: resource.population,
+      continent: resource.continent,
     }
   };
 
-  static toEntitiesFromResponse(response: CountryResponse): Country[]{
-    return response.countries.map(country => this.toEntityFromResource(country));
+  static toEntitiesFromResponse(response: CountryResponse[]): Country[] {
+    return response.map(country => this.toEntityFromResource(country));
   }
 }

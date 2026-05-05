@@ -1,14 +1,17 @@
-<mat-sidenav-container>
-  <mat-sidenav-content>
-    <mat-toolbar>
-      <span>
-        DiseaseFYI
-      </span>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content class="sidenav">
+    <mat-toolbar class="mat-toolbar">
+      <div class="toolbar-left">
+        <img [src]="logoUrl" alt="DiseaseFYI" class="toolbar-logo"/>
+        <span class="toolbar-title">DiseaseFYI</span>
+      </div>
       <span class="spacer"></span>
-      <span>
+      <div class="toolbar-right">
         <app-language-switcher/>
-      </span>
+      </div>
     </mat-toolbar>
+    <h3>{{'content.title' | translate}}</h3>
+    <app-country-list [countries]="countries()"/>
     <app-footer/>
   </mat-sidenav-content>
 </mat-sidenav-container>

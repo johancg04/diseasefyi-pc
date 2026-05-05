@@ -1,4 +1,11 @@
 {
+  "content": {
+    "title": "Datos Globales Sobre Enfermedades"
+  },
+  "country": {
+    "details": "Ver Detalles",
+    "share": "Compartir Datos de Enfermedades"
+  },
   "footer": {
     "copyright": "Todos los derechos reservados.",
     "developed": "Desarrollado por"

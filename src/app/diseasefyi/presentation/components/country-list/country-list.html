@@ -1,0 +1,5 @@
+<div class="cards-container">
+  @for (country of countries(); track country.country) {
+    <app-country-item [country]="country" class="country"/>
+  }
+</div>

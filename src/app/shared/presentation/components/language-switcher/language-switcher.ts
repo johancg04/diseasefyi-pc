@@ -12,10 +12,11 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrl: './language-switcher.css',
 })
 export class LanguageSwitcher {
-  currentLanguage = 'en';
+  currentLanguage : string;
   languages = ['en','es'];
 
   constructor(private translate: TranslateService) {
+    this.translate.use('en')
     this.currentLanguage = translate.getCurrentLang();
   }
 

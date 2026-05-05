@@ -1,4 +1,11 @@
 {
+  "content": {
+    "title": "Global Disease Data"
+  },
+  "country": {
+    "details": "View Details",
+    "share": "Share Disease Data"
+  },
   "footer": {
     "copyright": "All right reserved.",
     "developed": "Developed by"
