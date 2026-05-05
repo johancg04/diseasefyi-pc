@@ -9,7 +9,6 @@ import {
   MatCardTitle,
   MatCardTitleGroup
 } from '@angular/material/card';
-import {MatIcon} from '@angular/material/icon';
 import {TranslatePipe} from '@ngx-translate/core';
 import {MatButton, MatIconButton} from '@angular/material/button';
 
