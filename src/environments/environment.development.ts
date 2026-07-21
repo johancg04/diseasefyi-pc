@@ -5,5 +5,5 @@ export const environment = {
   diseaseProviderDiseaseEndpointPath:'countries',
 
   logoProviderApiBaseUrl:'https://img.logo.dev/',
-  logoProviderPublishableKey:'pk_I1p5ChnQTVemRtFb_JsUHw',
+  logoProviderPublishableKey:'',
 };
